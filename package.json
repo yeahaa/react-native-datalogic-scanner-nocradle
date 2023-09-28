@@ -159,5 +159,9 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "jest-react-native": "^18.0.0",
+    "save": "^2.9.0"
   }
 }
