@@ -6,10 +6,7 @@ import com.datalogic.decode.ReadListener
 import com.datalogic.decode.configuration.ScannerProperties
 import com.datalogic.device.ErrorManager
 
-import com.facebook.react.bridge.ReactApplicationContext
-import com.facebook.react.bridge.ReactContextBaseJavaModule
-import com.facebook.react.bridge.ReactMethod
-import com.facebook.react.bridge.Promise
+import com.facebook.react.bridge.*
 import com.facebook.react.modules.core.DeviceEventManagerModule
 
 class DatalogicScannerModule(reactContext: ReactApplicationContext) :

@@ -55,7 +55,7 @@ def supportsNamespace() {
 }
 
 android {
-  compileSdkPreview 'Datalogic:Datalogic SDK v1:30'
+  compileSdkVersion 'Datalogic:Datalogic SDK v1:30'
   if (supportsNamespace()) {
     namespace "com.datalogicscanner"
 
