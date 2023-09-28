@@ -22,6 +22,10 @@ def isNewArchitectureEnabled() {
 apply plugin: "com.android.library"
 apply plugin: "kotlin-android"
 
+ext {
+  defaultTargetSdkVersion = 31
+}
+
 
 def appProject = rootProject.allprojects.find { it.plugins.hasPlugin('com.android.application') }
 
@@ -51,6 +55,7 @@ def supportsNamespace() {
 }
 
 android {
+  compileSdkPreview 'Datalogic:Datalogic SDK v1:30'
   if (supportsNamespace()) {
     namespace "com.datalogicscanner"
 
@@ -61,12 +66,13 @@ android {
     }
   }
 
-  compileSdkVersion getExtOrIntegerDefault("compileSdkVersion")
 
   defaultConfig {
     minSdkVersion getExtOrIntegerDefault("minSdkVersion")
-    targetSdkVersion getExtOrIntegerDefault("targetSdkVersion")
+    targetSdk defaultTargetSdkVersion
     buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
+    versionCode 1
+    versionName '1.0'
   }
   buildTypes {
     release {
